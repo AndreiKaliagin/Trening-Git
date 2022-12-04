@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Project</title>
+  <link href="https://fonts.googleapis.com/css?family=Exo+2" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Rubik+Dirt&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Philosopher:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
+</head>
+<body>
+  <nav class="mainmenu" id="mainmenu">
+    <h1 class = "main-title">Проклятие Дакмуна</h1>
+    <ul class="mainmenu__list">
+      <li><a class="mainmenu__link" id="mainLink" href="#">Начать игру
+        <svg>
+            <rect></rect>
+        </svg>
+      </a>
+      </li>
+      <li><a class="mainmenu__link" id="aboutLink" href="#">Об игре
+        <svg>
+            <rect></rect>
+        </svg>
+      </a>
+      </li>
+      <li><a class="mainmenu__link" id="prologLink" href="#">Пролог
+        <svg>
+            <rect></rect>
+        </svg>
+      </a>
+      </li>
+      <li><a class="mainmenu__link" id="authorisation" href="#">Авторизация
+        <svg>
+            <rect></rect>
+        </svg>
+      </a>
+      </li>
+    </ul>
+  </nav>
+  <div class="content" id="content" ></div>
+
+  <script defer src="https://www.gstatic.com/firebasejs/9.10.0/firebase-app-compat.js"></script>
+  <script defer src="https://www.gstatic.com/firebasejs/9.10.0/firebase-database-compat.js"></script>
+  <script defer src="https://www.gstatic.com/firebasejs/9.10.0/firebase-auth-compat.js"></script>
+  <script defer src="scripts/firebase.js"></script>
+  <script defer src="scripts/dackmooncurse.js"></script>
+   </body>
+</html>

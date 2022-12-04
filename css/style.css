@@ -1,0 +1,323 @@
+        * {
+            box-sizing: border-box;
+        }
+   
+       body {
+         padding: 0px;
+         margin: 0;
+         font-family: 'Philosopher', sans-serif;
+         font-size:24px;
+         box-sizing: border-box;
+         height:100vh;
+       }
+       .main-title{
+           text-align: center;
+           font-size: 48px;
+       }
+       h1{
+         font-style: italic;
+         font-size: 30px;
+       }
+       .mainmenu{
+           padding-top:10vh;
+       }
+       .mainmenu__list {
+         padding: 0;
+         margin: 0;
+         list-style: none;
+         display: flex;
+         flex-direction: column;
+         align-items: center;
+       }
+       .mainmenu__list-horisontal {
+         padding: 0;
+         margin: 0;
+         list-style: none;
+         display: flex;
+         flex-direction: row;
+         justify-content: center;
+         flex-wrap: wrap;
+       }
+   
+       .mainmenu__list li{
+           padding:5px;
+       }
+   
+       .mainmenu__link {
+         display: block;
+         padding: 10px 25px;
+         color: #000;
+         text-decoration: none;
+         text-align: center;
+         font-family: 'Rubik Dirt', cursive;
+         font-size: 24px;
+         width: 320px;
+         list-style: none;
+   
+         margin-bottom: 10px;
+         height:70px;
+         line-height: 50px;
+         position:relative;
+       }
+   
+       .mainmenu__link:hover {
+         text-decoration: none;
+         color: #fff;
+       }
+   
+       .mainmenu__link.active {
+         text-decoration: none;
+         background-color: #000;
+         color: #fff;
+       }
+   
+       .content {
+         position:relative;
+         padding-bottom: 2%;
+         margin:0 10%;
+       }
+   
+       #sword{
+         position: absolute;
+         right: 0;
+         z-index: 5;
+       }
+   
+       #axe{
+         position: absolute;
+         left: 0;
+         z-index: 5;
+       }
+   
+   /*        CUBES         */
+   
+       .wrapper-dices {
+           max-width: 460px;
+           padding: 0 40px;
+           border-radius: 10px;
+           margin: 10px auto;
+           background-color: #7f5a3636;
+           display: flex;
+           flex-direction: column;
+           justify-content: space-between;
+       }
+   
+       .wrapper-dices-p {
+           color: #645e5f;
+           font-size: 22px;
+           text-align: center;
+       }
+   
+       .wrapper-dices > .row-2 {
+           display: flex;
+           flex-flow: row wrap;
+           justify-content: space-between;
+       }
+   
+       .wrapper-dices > .row-2 > .row-2-col {
+           display: flex;
+           margin: auto;
+           justify-content: space;
+           flex-direction: column;
+       }
+   
+       .wrapper-dices > .row-2 > .row-2-col > img {
+           position: relative;
+           max-width: 100px;
+           margin: 20px auto;
+           filter: grayscale(100%);
+           height: auto;
+       }
+   
+       .wrapper-dices > .row-3 {
+           display: flex;
+       }
+   
+       .wrapper-dices > .row-3 > .btn-roll-dices {
+           padding: 10px 15px;
+           font-size: 24px;
+           color: #645e5f;
+           margin: auto;
+           cursor: pointer;
+           border-radius: 10px;
+           font-weight: bold;
+           border: 2px solid #363636;
+           transition: box-shadow 0.1s ease-in-out, transform 0.1s ease-in-out;
+       }
+   
+       .wrapper-dices > .row-3 > .btn-roll-dices:hover {
+           box-shadow: -4px 4px 8px rgba(34, 34, 34, 0.15), 4px 4px 8px rgba(34, 34, 34, 0.15);
+           transform: scale(1.05, 1.05);
+       }
+   
+       .wrapper-dices > .result {
+           font-size: 22px;
+           color: #363636;
+           margin: 20px auto;
+           font-weight: bold;
+           text-align: center;
+       }
+       .btn-roll-dice-disabled{
+           pointer-events: none;
+           cursor: default;
+       }
+       /* Ссылки перехода на новые главы */
+       .link-chapter-disabled {
+           pointer-events: none;
+           cursor: default;
+       }
+   
+       .link-chapter-animation{
+           display: inline-block;
+           height:24px;
+           animation: link-chapter-animation 1s infinite;
+           transform-origin: center;
+           animation-direction: alternate;
+       }
+   
+       @keyframes link-chapter-animation{
+       0%{transform:rotate(20deg);}
+       100%{transform:rotate(-20deg);}
+     }
+   
+       .link-chapter{
+           text-decoration: none;
+           color: rgb(39, 36, 36);
+           font-size: 1.2em;
+           cursor:pointer;
+       }
+   
+       .link-chapter:hover{
+               text-shadow: 0 0 2px #000000;
+       }
+   
+       .links-chapter13{
+         display: flex;
+         justify-content: space-evenly;
+       }
+       /* Анимация ссылок главного меню при наведении */
+       .mainmenu__link svg{
+           position: absolute;
+           top:0;
+           left:0;
+           width:100%;
+           height:100%;
+       }
+       .mainmenu__link svg rect{
+           width:100%;
+           height:100%;
+           fill:transparent;
+           stroke:#3a3937;
+           stroke-width:5px;
+           stroke-dasharray: 10px 300px 20px 50px 20px 300px 20px 50px 10px;
+           transition:.5s all;
+       }
+       .mainmenu__link:hover rect{
+           stroke-dasharray: 320px 0 70px 0 320px 0 70px 0;
+       }
+         /* кнопки фоновой музыки и закрыть*/
+       .btns-div{
+         height:65px;
+       }
+   
+       #musicPlay {
+         position: fixed;
+         top: 10px;
+         right: 60px;
+         width: 50px;
+         height: 50px;
+         cursor: pointer;
+         background-image: url(/Images/musicOn.png);
+         background-size: cover;
+       }
+       #musicStop {
+         position: fixed;
+         top: 10px;
+         right: 60px;
+         width: 45px;
+         height: 45px;
+         cursor: pointer;
+         background-image: url(/Images/musicOff.png);
+         background-size: cover;
+       }
+       .music-hide{
+         display: none;
+       }
+       #closeGame{
+         position: fixed;
+         top: 15px;
+         right: 10px;
+         width: 40px;
+         height: 40px;
+         cursor: pointer;
+         background-image: url(/Images/close.png);
+         background-size: cover;
+       }
+   
+       /*инвентарь */
+       .staff-hide{
+         display:none;
+       }
+       .staff{
+         display:none;
+       }
+       #show-staff{
+         text-decoration: none;
+         color:black;
+       }
+       .input-staff{
+         width:300px;
+         margin:0 auto;
+       }
+       .add-staff{
+         width:300px;
+         height: 30px;
+         margin: 5px 5px;
+         font-size: 20px;
+         background-color: rgba(255, 255, 255, 0.1);
+         color:#000;
+         border-radius: 5px;
+       }
+       .add-staff::placeholder {
+         color: #000;
+       }
+       /* Стили картинок в главах */
+       .chapter-img-left{
+           float: left;
+           margin: 0 15px 0 0;
+       }
+       .chapter-img-right{
+           float: right;
+           margin: 0 0 0 15px;
+       }
+       .chapter-img-center{
+           display: block;
+           margin: 10px auto;
+       }
+       /*анимация game over*/
+       #game-over{
+           display: block;
+           width:300px;
+           height:300px;
+           margin: 0 auto;
+           animation: gameover 1s cubic-bezier(0.245, 0.325, 0.510, 1.305) infinite alternate;
+       }
+       @keyframes gameover{
+           0%{transform:scale(1.2)}
+       }
+       /*кнопки авторизации*/
+       .auth-div{
+         display:flex;
+         flex-direction: column;
+         align-items: center;
+       }
+       .auth-button{
+         width:300px;
+         height: 30px;
+         margin:5px;
+         background-color: rgba(255, 255, 255, 0.1);
+         border-radius: 5px;
+         font-size: 20px;
+         color: #000;
+         cursor:pointer;
+       }
